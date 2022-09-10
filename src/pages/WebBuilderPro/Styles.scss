@@ -1,0 +1,36 @@
+$base-font-size: 16px;
+$dark-theme-color: #F0F0F0;
+$dark-background-color: #282828;
+$light-theme-color: #282828;
+$light-background-color: #F0F0F0;
+
+
+#WebBuilderProUI {
+  font-size: $base-font-size;
+  font-family: Roboto, Helvetica, sans-serif;
+  font-weight: 100;
+  letter-spacing: 0.5px;
+  width: auto;
+  height: auto;
+  margin: 0px;
+  padding: 0px;
+  overflow: hidden;
+  user-select: none;
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  box-sizing: border-box;
+
+  & .theme-dark {
+    color: $dark-theme-color;
+    background-color: $dark-background-color;
+    transition: color 0.5s, background-color 0.5s;
+  }
+
+  & .theme-light {
+    color: $light-theme-color;
+    background-color: $light-background-color;
+    transition: color 0.5s, background-color 0.5s;
+  }
+}

@@ -6,7 +6,7 @@ export const AppDataContext = React.createContext<IAppDataContext | null>(null);
 export const AppDataProvider: React.FC<React.PropsWithChildren> = ({ children }) => {
   const [appData, setAppData] = React.useState<IAppData>({
     theme: "dark",
-    currentView: "desktop",
+    selectedVQView: 0,
     screenWidth: 0,
     screenHeight: 0,
     latestId: 0

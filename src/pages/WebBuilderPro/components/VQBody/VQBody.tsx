@@ -67,6 +67,7 @@ const VQBody: React.FC = () => {
       <div id="VQBodyIDE" style={{position: "absolute", left: "1000000px", top: "1000000px", width: "500px", height: "500px", border: "1px solid blue", boxSizing: "border-box"}}>
         down: {isMouseDown.toString()} <br />
         pressed: {isSpaceKeyDown.toString()}
+        currentView: {vqBodyData.currentView}
       </div>
       {
         objectsInVQBodyData.map((item, i) => {

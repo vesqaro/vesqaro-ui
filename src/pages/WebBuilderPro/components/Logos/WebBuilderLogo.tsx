@@ -2,8 +2,8 @@
 import React from 'react';
 import Image from '../Image/Image';
 
-function WebBuilderLogo() {
-	function onClickHandler(event) {
+const WebBuilderLogo: React.FC = () => {
+	function onClickHandler(event: any) {
 		//document.body.style.filter = "brightness(150%)";
 	}
 	return (

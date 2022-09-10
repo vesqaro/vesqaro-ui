@@ -1,23 +1,23 @@
 /* CSS Document */
 
-:root {
-	--barcolor: #2E2E2E;
-	--bodybackgroundcolor: #282828;
-	--extradarkgray: #333333;
-	--verydarkgray: #282828;
-	--bordercolor: #282828;
-	--boxescolor: #2E2E2E;
-	--color: #F0F0F0;
-	--defaultbackgroundcolorinide: #212121;
-	--defaulttextcolorinide: #F0F0F0;
-	--defaultfontfamilyinide: Arial, Felvetica, Sans-Serif;
-	--menuoptionwidth: 85px;
-	--menuoptionheight: 55px;
-	--menutextolor: #E0E0E0;
-	--basefontsize: 16px;
-	--divinidewidth: 95px;
-	--divinideheight: 65px;
-}
+
+//bar-color: #2E2E2E;
+$body-background-color: #282828;
+//$extra-dark-gray: #333333;
+$very-dark-gray: #282828;
+//$border-color: #282828;
+$boxes-color: #2E2E2E;
+$color: #F0F0F0;
+//$default-background-color-inide: #212121;
+$default-text-color-inside: #F0F0F0;
+$default-font-family-inside: Arial, Felvetica, Sans-Serif;
+$menu-option-width: 85px;
+$menu-option-height: 55px;
+$menu-text-color: #E0E0E0;
+$base-font-size: 16px;
+$div-inside-width: 95px;
+$div-inside-height: 65px;
+
 
 /* width */
 /*::-webkit-scrollbar {
@@ -32,7 +32,7 @@
 
 /* Handle */
 /*::-webkit-scrollbar-thumb {
-  background: var(--verydarkgray);
+  background: $very-dark-gray;
   border-radius: 10px;
 }*/
 
@@ -42,23 +42,10 @@
 }*/
 
 body {
-	width: auto;
-	color: var(--color);
-	font-size: var(--basefontsize);
-	font-family: Helvetica, sans-serif;
-	letter-spacing: 0.5px;
-	width: auto;
-	height: auto;
-	margin: 0px;
-	padding: 0px;
-	overflow: hidden;
-	background-color: var(--bodybackgroundcolor);
-	user-select: none;
-	-moz-user-select: none;
-	-khtml-user-select: none;
-	-webkit-user-select: none;
-	-ms-user-select: none;
 	box-sizing: border-box;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
 }
 
 #MainDiv {
@@ -71,43 +58,14 @@ body {
 	background-color: green;
 }
 
-#MenuBar {
-	left: 0px;
-	top: 0px;
-	width: 100%;
-	height: 50px;
-	background-color: var(--boxescolor);
-	position: absolute;
-	border: 1px solid var(--verydarkgray);
-	z-index: 9999999;
-	box-sizing: border-box;
-	/*background-image: linear-gradient(var(--bodybackgroundcolor), var(--barcolor));*/
-}
-
-#LogoDiv {
-	margin-left: 15px;
-	cursor: pointer;
-	width: 60px;
-	height: 40px;
-	padding-top: 10px;
-	position: relative;
-	display: inline-block;
-}
-
-#LogoImage {
-	width: 100%;
-	height: auto;
-	position: relative;
-}
-
 #LeftMenu {
 	position: absolute;
 	width: 220px;
 	height: 100%;
 	left: 0;
 	top: 50px;
-	background-color: var(--boxescolor);
-	border-right: 1px solid var(--verydarkgray);
+	background-color: $boxes-color;
+	border-right: 1px solid $very-dark-gray;
 	box-sizing: border-box;
 
 	/*color: white;*/
@@ -116,7 +74,7 @@ body {
 .textboxFilterAreaDiv {
 	width: 210px;
 	font-size: 80%;
-	border: 2px solid var(--boxescolor);
+	border: 2px solid $boxes-color;
 	position: relative;
 	box-sizing: border-box;
 	/*margin-top: 10px;
@@ -131,8 +89,8 @@ body {
 	padding-top: 12px;
 	padding-left: 10px;
 	border: none;
-	background-color: var(--verydarkgray);
-	color: var(--color);
+	background-color: $very-dark-gray;
+	color: $color;
 	box-sizing: border-box;
 	/*font-size: 85%;*/
 	position: fixed;
@@ -146,7 +104,7 @@ body {
 	/*border: 1px solid green;*/
 	border: none;
 	background-color: transparent;
-	color: var(--color);
+	color: $color;
 	/*font-size: 80%;*/
 	box-sizing: border-box;
 	position: relative;
@@ -173,7 +131,7 @@ body {
 #MiddleBlock {
 	pointer-events: none;
 	position: relative;
-	color: var(--defaulttextcolorinide);
+	color: $default-text-color-inside;
 	height: 100%;
 	//background-color: red;
 	//opacity: 0.5;
@@ -215,8 +173,8 @@ body {
 
 #VQBody {
 	/*cursor: url('/images/customCursor.svg'), pointer;*/
-	font-family: var(--defaultfontfamilyinide);
-	color: var(--defaulttextcolorinide);
+	font-family: $default-font-family-inside;
+	color: $default-text-color-inside;
 	/*left: 200px;
 	top: 60px;*/
 	width: 2000000px;
@@ -254,9 +212,9 @@ body {
 	width: 220px;
 	height: 100%;
 	/*flex-basis: 220px;*/
-	background-color: var(--boxescolor);
+	background-color: $boxes-color;
 	position: absolute;
-	border-left: 1px solid var(--verydarkgray);
+	border-left: 1px solid $very-dark-gray;
 	box-sizing: border-box;
 	display: inline-block;
 
@@ -267,16 +225,16 @@ body {
 	/*color: white;*/
 	text-align: center;
 	border: 0px transparent solid;
-	background-color: var(--verydarkgray);
+	background-color: $very-dark-gray;
 	margin: 0.2px;
 	padding-top: 10px;
 	border-radius: 10px;
-	height: var(--menuoptionheight);
-	min-height: var(--menuoptionheight);
-	max-height: var(--menuoptionheight);
-	width: var(--menuoptionwidth);
-	min-width: var(--menuoptionwidth);
-	max-width: var(--menuoptionwidth);
+	height: $menu-option-height;
+	min-height: $menu-option-height;
+	max-height: $menu-option-height;
+	width: $menu-option-width;
+	min-width: $menu-option-width;
+	max-width: $menu-option-width;
 	position: relative;
 	display: inline-block;
 	cursor: grab;
@@ -294,13 +252,13 @@ body {
 
 .iconOption {
 	font-size: 70%;
-	color: var(--menutextolor);
+	color: $menu-text-color;
 }
 
 .textOption {
 	margin-top: 5px;
 	font-size: 60%;
-	color: var(--menutextolor);
+	color: $menu-text-color;
 	opacity: 0.2;
 }
 
@@ -309,8 +267,8 @@ body {
 	margin: 0.5em;*/
 	border: 2px solid #6195e8;
 	resize: both;
-	width: var(--divinidewidth);
-	height: var(--divinideheight);
+	width: $div-inside-width;
+	height: $div-inside-height;
 	cursor: pointer;
 }
 
@@ -348,7 +306,7 @@ body {
 }
 
 .propertiesBox{
-	border-bottom: 2px solid var(--verydarkgray);
+	border-bottom: 2px solid $very-dark-gray;
 	padding: 10px;
 	font-size: 90%;
 }
@@ -381,8 +339,8 @@ body {
 	width: 30px;
 	border: none;
 	border-radius: 0px;
-	background-color: var(--verydarkgray);
-	color: var(--color);
+	background-color: $very-dark-gray;
+	color: $color;
 	text-align: right;
 	font-size: 85%;
 	height: 20px;
@@ -393,8 +351,8 @@ body {
 	width: 30px;
 	border: none;
 	border-radius: 0px;
-	background-color: var(--verydarkgray);
-	color: var(--color);
+	background-color: $very-dark-gray;
+	color: $color;
 	text-align: right;
 	font-size: 85%;
 	height: 20px;
@@ -405,9 +363,9 @@ body {
 }
 
 .colorPickerInSettings {
-    border: 1px solid var(--verydarkgray);
+    border: 1px solid $very-dark-gray;
 	outline: none;
-	background-color: var(--bodybackgroundcolor);
+	background-color: $body-background-color;
 	padding: 0px;
 	margin: 0px;
 	width: 34px;
@@ -424,38 +382,6 @@ body {
 .unitsInSettings {
 	margin-left: 5px;
 	font-size: 80%;
-}
-
-.dropdownMenuBox {
-	z-index: 2000000;
-	top: -5px;
-	position: relative;
-	display: inline-block;
-	cursor: pointer;
-	margin-left: 40%;
-}
-
-.dropdownMenuList {
-	z-index: 2000000;
-	border: 1px solid var(--verydarkgray);
-	background-color: var(--boxescolor);
-	position: fixed;
-}
-
-.selectedDropdownMenuOption {
-	padding: 5px 10px 5px 10px;
-	font-size: 13px;
-	position: relative;
-}
-
-.dropdownMenuOption {
-	padding: 5px 10px 5px 10px;
-	font-size: 13px;
-	position: relative;
-}
-
-.dropdownMenuOption:hover {
-	background-color: var(--verydarkgray);
 }
 
 .DragToDropHelper {

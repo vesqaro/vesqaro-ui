@@ -5,6 +5,7 @@ export const VQBodyDataContext = React.createContext<IVQBodyDataContext | null>(
 
 export const VQBodyDataProvider: React.FC<React.PropsWithChildren> = ({ children }) => {
   const [vqBodyData, setVQBodyData] = React.useState<IVQBodyData>({
+    currentView: 1,
     translateX: 0,
     translateY: 0,
     currentScale: 1,

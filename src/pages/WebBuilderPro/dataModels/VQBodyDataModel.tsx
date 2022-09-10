@@ -1,4 +1,5 @@
 export interface IVQBodyData {
+  currentView: number;
   translateX: number;
   translateY: number;
   currentScale: number;

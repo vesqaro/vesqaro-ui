@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import ReactDOM from 'react-dom';
+//import ReactDOM from 'react-dom';
 import { AppDataContext } from "../../context/AppDataContext";
 import { IAppDataContext, IAppData } from "../../dataModels/AppDataModel";
 import { VQBodyDataContext } from "../../context/VQBodyDataContext";
@@ -7,7 +7,7 @@ import { IVQBodyDataContext, IVQBodyData } from "../../dataModels/VQBodyDataMode
 import { ObjectsInVQBodyDataContext } from "../../context/ObjectsInVQBodyDataContext";
 import { IObjectsInVQBodyDataContext, IObjectInVQBodyData } from "../../dataModels/ObjectsInVQBodyDataModel";
 
-const DragToDrop: React.FC = (props) => {
+const DragToDrop: React.FC<React.PropsWithChildren> = () => {
   const { appData, updateAppData } = useContext(AppDataContext) as IAppDataContext;
   const { vqBodyData, updateVQBodyData } = useContext(VQBodyDataContext) as IVQBodyDataContext;
   const { objectsInVQBodyData, updateObjectsInVQBodyData } = useContext(ObjectsInVQBodyDataContext) as IObjectsInVQBodyDataContext;
@@ -88,7 +88,7 @@ const DragToDrop: React.FC = (props) => {
     helper.remove();
   }
 
-  const dragStartedHandler = (event: any) => {
+  /*const dragStartedHandler = (event: any) => {
     event.preventDefault();
     document.body.setAttribute("isitembeingdragged", "true");
     //document.getElementById("VQBody").style.pointerEvents = "none";
@@ -118,16 +118,16 @@ const DragToDrop: React.FC = (props) => {
       helper.style.width = rect.width + 'px';
       helper.style.height = rect.height + 'px';
       helper.appendChild(coordinates);
-      document.onmouseup = this.mouseUpHelperHandler;
+      document.onmouseup = mouseUpHelperHandler;
     }
 
     offsetX = event.clientX - rect.x;
     offsetY = event.clientY - rect.y;
     document.body.appendChild(helper);
     document.onmousemove = dragHandler;
-  }
+  }*/
 
-  const dragHandler = (event: any) => {
+  /*const dragHandler = (event: any) => {
     const x: number = event.clientX - offsetX;
     const y: number = event.clientY - offsetY;
 
@@ -140,5 +140,6 @@ const DragToDrop: React.FC = (props) => {
     coordinates.innerHTML = "x: " + finalX + "<br> &nbsp;y: " + finalY;
     coordinates.style.fontSize = '80%';
     coordinates.style.padding = '2px';
-  }
+  }*/
+  return (<div />);
 }

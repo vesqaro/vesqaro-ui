@@ -1,6 +1,6 @@
 export interface IAppData {
   theme: "light" | "dark";
-  currentView: string;
+  selectedVQView: number;
   screenWidth: number;
   screenHeight: number;
   latestId: number;
